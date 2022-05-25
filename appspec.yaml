@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:156962844638:task-definition/component-processing-varshith:5"
+        LoadBalancerInfo:
+          ContainerName: "component-processing-service"
+          ContainerPort: "8081"
+        PlatformVersion: "LATEST"
